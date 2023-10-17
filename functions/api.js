@@ -2,14 +2,19 @@ const express = require('express');
 const serverless = require('serverless-http');
 const { LoadAlbums, albumsById, getMusics } = require('./modules/spotify.js');
 const path = require('path');
+const fs = require('fs');
+
 
 const app = express();
 const router = express.Router();
 const dbFilePath = path.resolve('db.json');
 
+
 //Get all students
 router.get('/', (req, res) => {
-  res.send(`App is running.. ${dbFilePath}`);
+        const data = JSON.parse(fs.readFileSync(dbFilePath, 'utf8'));
+    return res.status(200).json({ message: 'Created', data: data });
+ 
 });
 
 //Create new record
