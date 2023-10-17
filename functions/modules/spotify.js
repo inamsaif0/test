@@ -10,7 +10,7 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: process.env.SPOTIFY_CLIENT_SECRET
 })
 
-const dbFilePath = path.join('db.json');
+const dbFilePath = path.join('../../dist/db.json');
 
 
 const albumsById = async (targetId) => {
