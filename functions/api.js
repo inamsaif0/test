@@ -7,7 +7,8 @@ const fs = require('fs');
 
 const app = express();
 const router = express.Router();
-const dbFilePath = path.resolve('db.json');
+  const currentDirectory = process.cwd();
+  const dbFilePath = path.resolve(currentDirectory, './db.json');
 
 
 //Get all students
