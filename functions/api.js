@@ -1,12 +1,15 @@
 const express = require('express');
 const serverless = require('serverless-http');
 const { LoadAlbums, albumsById, getMusics } = require('./modules/spotify.js');
+const path = require('path');
+
 const app = express();
 const router = express.Router();
+const dbFilePath = path.resolve('db.json');
 
 //Get all students
 router.get('/', (req, res) => {
-  res.send(`App is running.. ${process.env.NAME}`);
+  res.send(`App is running.. ${dbFilePath}`);
 });
 
 //Create new record
