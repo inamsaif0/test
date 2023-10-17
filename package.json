@@ -19,6 +19,7 @@
     "crawler": "^1.4.0",
     "disconnect": "^1.2.2",
     "dotenv-cli": "^7.2.1",
+    "path": "^0.12.7",
     "genius-lyrics": "^4.4.3",
     "google-news-json": "^2.1.0",
     "nodemon": "^3.0.1",
